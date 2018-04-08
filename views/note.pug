@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= note.title
+    h5 Written by #{note.author}
+    p= note.body
+    hr
+    a.btn.btn-default(href="/note/edit/"+note._id)

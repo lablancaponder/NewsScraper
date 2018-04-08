@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title Denver Post Crime & Courts
+    link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href="/")
+        img.d-inline-block.align-top(src='https://www.denverpost.com/wp-content/uploads/2016/05/cropped-DP_bug_denverpost.jpg?w=512&h=512', height='30', alt='')
+        |      Crime & Courts Scraper
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExample07', aria-controls='navbarsExample07', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarsExample07.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item-active
+            a.nav-itm.nav-link(href="/")
+              |  Home  
+          li.nav-item
+            a.nav-itm.nav-link(href="/scrape") Scrape Articles  
+          li.nav-item 
+            a.nav-itm.nav-link(href="/notes") View Notes
+        
+
+    .container
+      block content
+        br
+        hr
+        
+        footer
+          em Denver Post Crime & Courts Scraper | Heroku App | Github Repo
+    script(src="/bower_components/jquery/dist/jquery.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
