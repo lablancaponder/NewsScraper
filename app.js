@@ -10,9 +10,17 @@ const bodyParser = require("body-parser");
 mongoose.Promise = global.Promise;
 
 // ----------------- CONNECT TO DB
-mongoose.connect("mongodb://localhost/crimeandcourts");
-let db = mongoose.connection;
+// mongoose.connect("mongodb://localhost/crimeandcourts");
 
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongolab-animate-94406";
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {
+  useMongoClient: true
+});
+
+let db = mongoose.connection;
 
 // ----------------- CHECK DB CONNECTION
 db.once("open", () => {
