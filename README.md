@@ -8,7 +8,7 @@
 
 
 
-## GitHub Repo: https://github.com/lponder82/liri-node-app.git
+## Heroku Link: https://pacific-crag-70213.herokuapp.com/
 
 
 ## Languages/Packages used:
